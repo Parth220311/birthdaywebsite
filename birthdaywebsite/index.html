@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Confetti Container -->
+    <div class="confetti-container"></div>
+
+    <div class="container">
+        <div class="card">
+            <h1 class="greeting">Happy Birthday, Arpita!!!</h1>
+            <p class="message"> Isshh.....😝😂Wishing you all the happiness in the world on your special day. You deserve it!</p>
+
+            
+            <!-- Person's Image -->
+            <div class="image-container">
+                <img src="assets/person.jpeg" alt="Birthday Person" class="person-image">
+            </div>
+
+            <!-- Audio Elements -->
+            <audio id="clickSound" src="assets/click.mp3" preload="auto"></audio>
+            <audio id="hoverSound" src="assets/hover.mp3" preload="auto"></audio>
+
+
+            <!-- Countdown Timer -->
+            <div class="countdown">
+                <h2>Next Birthday In:</h2>
+                <div class="countdown-timer">
+                    <div class="time" id="days">0</div><span>Days</span>
+                    <div class="time" id="hours">0</div><span>Hours</span>
+                    <div class="time" id="minutes">0</div><span>Minutes</span>
+                    <div class="time" id="seconds">0</div><span>Seconds</span>
+                    <!-- Add this inside the card, below the countdown section -->
+                    <button class="celebrate-btn">Celebrate Now!</button>
+                    <p class="special-message">Have an amazing birthday filled with joy and love!</p>
+
+                </div>
+            </div>
+
+            <p class="from">From, Lord Parth 😂😂</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

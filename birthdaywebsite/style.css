@@ -1,0 +1,217 @@
+/* Reset and Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Background Gradient Animation */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #ffb6b9);
+    background-size: 400% 400%;
+    animation: gradientBackground 10s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+/* Container and Card */
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    width: 90%;
+    max-width: 620%;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+.greeting {
+    font-size: 2.2em;
+    color: #FF9A9E;
+    margin-bottom: 15px;
+}
+
+/* Smooth Page Loading */
+body {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+.message {
+    font-size: 1.2em;
+    color: #333;
+    margin: 15px 0;
+}
+
+/* Person's Image */
+.image-container {
+    margin: 20px 0;
+}
+
+/* Image Hover Animation */
+.person-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.person-image:hover {
+    transform: scale(1.05) rotate(5deg);
+}
+
+/* Text Fade-In Animation */
+.greeting, .message, .countdown h2 {
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Neon Text Effect */
+.greeting {
+    font-size: 2.5em;
+    color: #fff;
+    text-shadow: 0 0 10px #FF6A6A, 0 0 20px #FF6A6A, 0 0 30px #FF6A6A, 0 0 40px #FF6A6A, 0 0 50px #FF6A6A;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 5px #FF6A6A; }
+    to { text-shadow: 0 0 20px #FF9A9E, 0 0 30px #FFD700; }
+}
+
+/* Countdown Number Transition */
+.time {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #FF9A9E;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.time.update {
+    transform: scale(1.2);
+    opacity: 0.7;
+}
+
+
+/* Countdown Styling */
+.countdown {
+    margin: 20px 0;
+}
+
+.countdown h2 {
+    font-size: 1.8em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.time {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #FF9A9E;
+}
+/* Button Styling */
+.celebrate-btn {
+    padding: 12px 20px;
+    background-color: #FF9A9E;
+    color: white;
+    font-size: 1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px;
+}
+
+.celebrate-btn:hover {
+    background-color: #FF6A6A;
+    transform: scale(1.05);
+}
+
+/* Special Message Styling */
+.special-message {
+    display: none;
+    font-size: 1.3em;
+    color: #FF9A9E;
+    margin-top: 15px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+
+/* Confetti Styling */
+.confetti-container {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #FFD700;
+    opacity: 0.7;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+@keyframes slideIn {
+    0% { transform: translateY(100%); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
